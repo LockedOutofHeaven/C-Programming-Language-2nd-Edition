@@ -2,6 +2,7 @@
 
 int main() {
   printf("exer\cise 1-2\n");
+  return 0;
 }
 
 // 1 warning generated.
