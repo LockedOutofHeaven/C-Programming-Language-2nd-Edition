@@ -1,5 +1,8 @@
 #include <stdio.h>
 
-void printHello() {
-    printf("%s", "Hello, LockedOutofHeaven!\n");  
+#include "greeting.h"
+
+void printHello()
+{
+    printf("Hello, %s\n", greeting("LockedOutofHeaven")); 
 }

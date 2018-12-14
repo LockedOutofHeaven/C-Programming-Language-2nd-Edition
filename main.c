@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 #include "hello.h"
 
-int main(void)
+int main(int argc, char const *argv[])
 {
     printHello();
-    
+
     return 0;
 }
