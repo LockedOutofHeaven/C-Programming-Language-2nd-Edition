@@ -4,5 +4,5 @@
 
 void printHello()
 {
-    printf("Hello, %s\n", greeting("LockedOutofHeaven")); 
+    printf("Hello, %s!\n", greeting("LockedOutofHeaven")); 
 }

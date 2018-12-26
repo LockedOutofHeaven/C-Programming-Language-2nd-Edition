@@ -1,15 +1,14 @@
 BIN = cpl
 
-.PHONY: all
-all: $(BIN)
+OBJECTS = greeting.o hello.o main.o
 
-greeting.o: greeting.h greeting.c
-hello.o: hello.h hello.c greeting.h
-main.o: main.c hello.h
+$(BIN): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $@
 
-$(BIN): greeting.o hello.o main.o
-	$(CC) greeting.o hello.o main.o -o $@
+greeting.o: greeting.h
+hello.o: hello.h greeting.h
+main.o: hello.h
 
 .PHONY: clean
 clean:
-	rm *.o $(BIN)
+	@-rm $(OBJECTS) $(BIN)
